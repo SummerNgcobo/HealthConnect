@@ -1,0 +1,84 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+}
+
+
+.main {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+
+.main-top {
+    display: flex;
+    width: 100%;
+}
+
+.main-top i {
+    position: absolute;
+    right: 0;
+    margin: 10px 30px;
+    color: rgb(110, 109, 109);
+    cursor: pointer;
+}
+
+.main-skills {
+    display: flex;
+    margin-top: 20px;
+}
+
+.main-skills .card {
+    width: 25%;
+    margin: 10px;
+    background: #fff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.main-skills .card:hover {
+    background: #fff;
+}
+
+.main-skills .card h3 {
+    margin: 10px;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+.main-skills .card p {
+    font-size: 12px;
+}
+
+.main-skills .card button {
+    background-color: orangered;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.main-skills .card button:hover {
+    background: rgba(223, 70, 15, 0.856);
+}
+
+.main-skills .card i {
+    font-size: 22px;
+    padding: 10px;
+}
+
+.emoji {
+    display: inline-block;
+    font-size: 2rem; /* Adjust size as needed */
+    animation: wave 1s infinite;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-20deg); }
+    100% { transform: rotate(0deg); }
+}

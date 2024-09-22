@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Illnesses in Rural South Africa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0056b3;
+        }
+        button {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font: inherit;
+            color: inherit;
+            cursor: pointer;
+            text-align: inherit;
+            text-decoration: none;
+        }
+
+        button:hover {
+            text-decoration: underline;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+
+        .illness-list {
+            list-style: none;
+            padding: 0;
+        }
+        .illness-item {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+        }
+        .illness-item i {
+            font-size: 2em;
+            color: #0056b3;
+            margin-right: 15px;
+        }
+        .illness-item button {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .illness-item p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Common Illnesses in Rural South Africa</h1>
+        <ul class="illness-list">
+            <li class="illness-item">
+                <i class="fas fa-virus"></i>
+                <div>
+                    <button id="hiv-button">HIV/AIDS</button>
+                    <p>A major health concern, particularly in rural areas where access to testing and treatment might be limited.</p>
+                </div>
+            </li>
+            <li class="illness-item">
+                <i class="fas fa-lungs"></i>
+                <div>
+                    <button id="tb-button">Tuberculosis (TB)</button>
+                    <p>Often prevalent in areas with high HIV rates and limited healthcare resources.</p>
+                </div>
+            </li>
+            <li class="illness-item">
+                <i class="fas fa-bug"></i>
+                <div>
+                    <button id="mal-button">Malaria</button>
+                    <p>Common in areas with suitable conditions for the Anopheles mosquitoes that transmit the disease.</p>
+                </div>
+            </li>
+            <li class="illness-item">
+                <i class="fas fa-tint"></i>
+                <div>
+                    <button id="dia-button">Diarrheal Diseases</button>
+                    <p>Conditions like cholera and gastroenteritis, often linked to poor sanitation and contaminated water sources.</p>
+                </div>
+            </li>
+            <li class="illness-item">
+                <i class="fas fa-smog"></i>
+                <div>
+                    <button>Respiratory Infections</button>
+                    <p>Including pneumonia and bronchitis, which can be exacerbated by poor living conditions and inadequate access to medical care.</p>
+                </div>
+            </li>
+            <li class="illness-item">
+                <i class="fas fa-heartbeat"></i>
+                <div>
+                    <button>Chronic Conditions</button>
+                    <p>Such as hypertension and diabetes, which may be less monitored due to limited healthcare infrastructure.</p>
+                </div>
+            </li>
+            <li class="illness-item">
+                <i class="fas fa-apple-alt"></i>
+                <div>
+                    <button>Nutritional Deficiencies</button>
+                    <p>Conditions like kwashiorkor or marasmus due to inadequate nutrition and food security.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('hiv-button').addEventListener('click', function() {
+            window.location.href = 'lol.html';
+     });
+     document.getElementById('tb-button').addEventListener('click', function() {
+            window.location.href = 'tb.html'; });
+            document.getElementById('mal-button').addEventListener('click', function() {
+            window.location.href = 'malaria.html'; });  
+            document.getElementById('dia-button').addEventListener('click', function() {
+            window.location.href = 'dia.html'; });            
+    </script>
+</body>
+</html>

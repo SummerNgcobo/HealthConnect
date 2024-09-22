@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+
+{% block content %}
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <section class="main">
+        <div class="main-top">
+            <h1>Welcome, {{user.first_name}} <span class="emoji">👋</span></h1>
+            <i class="fas fa-user-cog"></i>
+        </div>
+        <div class="main-skills">
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>My Medical History</h3>
+                <p>Join over 1 million students.</p>
+               <button><a href="{{ url_for('views.medical_history') }}" class="btn">View History</a></button>
+            </div>
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Make a Booking</h3>
+                <p>Join over 1 million students.</p>
+                <button><a href="{{ url_for('views.booking') }}">Book Now</a></button>
+            </div>
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Volunteer</h3>
+                <p>Join over 1 million students.</p>
+                <button> <a href="{{ url_for('views.volunteer') }}" class="btn">Volunteer Now</a></button>
+            </div>
+        </div>
+        <div class="main-skills">
+        <div class="card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Mobile Clinic Dates</h3>
+            <p>Join over 1 million students.</p>
+            <button><a href="{{ url_for('views.mobile_clinic_dates') }}" class="btn">View Dates</a</button>
+        </div>
+        <div class="card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Doctors Near Me</h3>
+            <p>Join over 1 million students.</p>
+            <button><a href="{{ url_for('views.doctors_near_me') }}" class="btn">View Doctors</a></button>
+        </div>
+        <div class="card">
+            <i class="fas fa-laptop-code emoji"></i>
+            <h3>Common Illnesses</h3>
+            <p>Join over 1 million students.</p>
+            <button id="learn-more-button" class="button-link"><a href="{{ url_for('views.sick') }}" class="btn">Learn More</a></button>
+        </div>
+    </div>
+    <div class="main-skills">
+        <div class="card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>I am a Doctor</h3>
+            <p>Join over 1 million students.</p>
+            <button> <a href="{{ url_for('views.doctor_account') }}" class="btn">See Account</a></button>
+        </div>
+        <div class="card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>I am a medical student</h3>
+            <p>Join over 1 million students.</p>
+            <button>  <a href="{{ url_for('views.student_account') }}" class="btn">See Account</a></button>
+        </div>
+        <div class="card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>I am a Volunteer</h3>
+            <p>Join over 1 million students.</p>
+            <button><a href="{{ url_for('views.volunteer_account') }}" class="btn">See Account</a></button>
+        </div>
+
+      <script>
+     
+document.getElementById('learn-more-button').addEventListener('click', function() {
+    window.location.href = "{{ url_for('views.sick') }}";
+});
+
+</script>
+    </section>
+    
+</body>
+</html>
+
+{% endblock %}

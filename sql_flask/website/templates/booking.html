@@ -1,0 +1,90 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h1>Make a Booking</h1>
+    <form id="booking-form" action="{{ url_for('views.booking') }}" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <div class="form-group">
+        <label for="medical-service">Medical Service:</label>
+        <select id="medical-service" name="medical-service" required>
+          <option value="">Select a service</option>
+          <option value="doctor-visit">Doctor Visit</option>
+          <option value="lab-test">Lab Test</option>
+          <option value="medication-delivery">Medication Delivery</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Make Booking</button>
+    </form>
+  </div>
+
+  <div id="booking-response"></div>
+
+{% endblock %}
+
+<!-- 
+Python (Flask) Backend:
+# app.py
+
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/make-booking', methods=['POST'])
+def make_booking():
+    name = request.form['name']
+    email = request.form['email']
+    phone = request.form['phone']
+    date = request.form['date']
+    time = request.form['time']
+    medical_service = request.form['medical-service']
+
+    # Validate and process the booking request
+    # ...
+
+    return jsonify({'message': 'Booking successful!'})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+    // index.js
+    JavaScript:
+
+$(document).ready(function() {
+  $('#booking-form').submit(function(event) {
+    event.preventDefault();
+    var formData = $(this).serialize();
+    $.ajax({
+      type: 'POST',
+      url: '/make-booking',
+      data: formData,
+      success: function(response) {
+        $('#booking-response').html(response.message);
+      },
+      error: function(xhr, status, error) {
+        $('#booking-response').html('Error: ' + error);
+      }
+    });
+  });
+});
+ -->

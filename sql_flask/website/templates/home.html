@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}
+    HealthConnect
+{% endblock %}
+
+{% block content %}
+    <title>HealthConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <section class="home" id="home">
+        <div class="image">
+            <img src="{{ url_for('static', filename='img/Untitled design (2).png') }}" alt="Logo">
+        </div>
+        <div class="content">
+            <h1> Revolutionizing healthcare access</h1>
+            <h3>Stay Safe, Stay Healthy</h3>
+            <a href="#" class="btn">Contact Us <span class="fas fa-chevron-right"></span></a>
+        </div>
+    </section>
+
+    <section class="icons-container">
+        <div class="icons">
+            <i class="fas fa-user-md"></i>
+            <h3>140+</h3>
+            <p>doctors at work</p>
+        </div>
+        <div class="icons">
+            <i class="fas fa-users"></i>
+            <h3>1040+</h3>
+            <p>satisfied patients</p>
+        </div>
+        <div class="icons">
+            <i class="fas fa-map"></i>
+            <h3>3</h3>
+            <p>provinces</p>
+        </div>
+        <div class="icons">
+            <i class="fas fa-hospital"></i>
+            <h3>80+</h3>
+            <p>available hospitals</p>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h1 class="heading">Our <span>Services</span></h1>
+        <div class="images">
+            <img src="{{ url_for('static', filename='img/Personal data.gif') }}" alt="">
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-pills"></i>
+                <h3>Medicine Delivery</h3>
+                <p>We help people in need of their medication refill but can't get to the hospital.</p>
+                <a href="#" class="btn">Learn More <span class="fas fa-chevron-right"></span></a>
+            </div>
+            <div class="box">
+                <i class="fas fa-notes-medical"></i>
+                <h3>Free Checkups</h3>
+                <p>We provide free medical checks with trusted doctors.</p>
+                <a href="#" class="btn">Learn More <span class="fas fa-chevron-right"></span></a>
+            </div>
+            <div class="box">
+                <i class="fas fa-ambulance"></i>
+                <h3>Mobile Clinic</h3>
+                <p>We have mobile clinics that visit rural areas and provide medical care for those in need.</p>
+                <a href="#" class="btn">Learn More <span class="fas fa-chevron-right"></span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h1 class="heading"><span>About</span> Us</h1>
+        <div class="row">
+            <div class="content">
+                <h3>We bring healthcare to you</h3>
+                <p>Giving patients access to their medical records and treatment plans for better peace of mind.</p>
+                <p>Expanding home care services to support recovery in a familiar environment.</p>
+                <p>Supporting mental well-being during recovery with accessible resources.</p>
+                <p>Sending medication and appointment reminders to ensure adherence to treatment plans.</p>
+                <p>Helping SA to access healthcare.</p>
+                <a href="#" class="btn">Learn More <span class="fas fa-chevron-right"></span></a>
+            </div>
+            <div class="image">
+                <img src="{{ url_for('static', filename='img/Ambulance-rafiki.svg') }}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="book" id="book">
+        <h1 class="heading"><span>Book</span> Now</h1>
+        <div class="row">
+            <div class="image">
+                <img src="{{ url_for('static', filename='img/Gynecology consultation.gif') }}" alt="">
+            </div>
+            <form action="">
+                <h3>Book Appointment</h3>
+                <input type="text" placeholder="Your Name" class="box">
+                <input type="number" placeholder="Your Number" class="box">
+                <input type="email" placeholder="Your Email" class="box">
+                <input type="date" class="box">
+                <input type="submit" value="Book Now" class="btn">
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2><i class="fas fa-heartbeat"></i> HealthConnect</h2>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HealthConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+
+
+
